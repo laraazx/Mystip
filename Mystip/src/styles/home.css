@@ -1,0 +1,51 @@
+.start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 140px;
+}
+
+.image-and-name {
+  display: flex;
+  align-items: center;
+}
+
+.textLogo {
+  color: #fff;
+}
+
+.textLogo h1 {
+  font-size: 7vw;
+  max-width: 18vw;
+  word-wrap: break-word;
+  line-height: 0.9;
+}
+
+.textIntroduction h2 {
+  font-size: 2.5vw;
+  width: 40vw;
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+}
+
+.text-and-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonCatalog {
+  width: 30vw;
+  height: 10vh;
+  background: #1C9982;
+  margin: 5% 0 0 0;
+  text-align: center;
+  display: flex;
+}
+
+.buttonCatalog a {
+  text-decoration: none;
+  color: #fff;
+  
+}
