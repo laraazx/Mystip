@@ -1,51 +1,36 @@
-.start {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 140px;
+.background img{
+  max-width: 100%;
 }
 
-.image-and-name {
-  display: flex;
-  align-items: center;
-}
-
-.textLogo {
-  color: #fff;
-}
-
-.textLogo h1 {
-  font-size: 7vw;
-  max-width: 18vw;
-  word-wrap: break-word;
-  line-height: 0.9;
-}
-
-.textIntroduction h2 {
-  font-size: 2.5vw;
-  width: 40vw;
-  text-align: center;
-  color: #fff;
-  font-weight: normal;
-}
-
-.text-and-button {
+.text-and-button{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10%;
 }
 
-.buttonCatalog {
-  width: 30vw;
-  height: 10vh;
-  background: #1C9982;
-  margin: 5% 0 0 0;
+.text h2{
+  width: 60vw;
+  font-size: 2.5vw;
   text-align: center;
-  display: flex;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
-.buttonCatalog a {
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 2%;
+  background: #A7C709;
+  width: 40vw;
+  height: 11vh;
+  border-radius: 15px;
+}
+
+.button a{
   text-decoration: none;
   color: #fff;
-  
+  font-size: 1.5vw;
 }

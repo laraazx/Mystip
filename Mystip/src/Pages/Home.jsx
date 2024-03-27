@@ -1,28 +1,31 @@
-import '../styles/home.css'
-import drinkFoto from '../assets/img/drink.svg'
-import { Link } from 'react-router-dom'
+import "../styles/home.css";
+import backgroundPhoto from "../assets/img/background.svg";
+import { Link } from "react-router-dom";
+import { Header } from "../componentes/Header";
 
-export function Home(){
-    return (
-        <header>
-        <div className="start">
-          <div className="image-and-name">
-            <div className="imageDrink">
-              <img src={drinkFoto} alt="" />
-            </div>
-            <div className="textLogo">
-                <h1><span style={{color: '#CD001F'}}>MYS</span><span style={{fontSize: '9.5vw'}}>TIP</span></h1>
-            </div>
-          </div>
-          <div className="text-and-button">
-            <div className="textIntroduction">
-                <h2>Descubra o mundo das bebidas no Mystip. Receitas e dicas - <span style={{color: '#1F9A84'}}>tudo em um só lugar.</span></h2>
-            </div>
-            <div className="buttonCatalog">
-                <Link to="/catalog">VER CATÁLOGO</Link>
-            </div>
-          </div>
+export function Home() {
+  return (
+    <div className="home">
+      <Header />
+      <div className="background">
+        <img src={backgroundPhoto} alt="" />
+      </div>
+
+      <div className="text-and-button">
+        <div className="text">
+          <h2>
+            Onde os <span style={{ color: "#920104" }}>amantes</span> da{" "}
+            <span style={{ color: "#A7C709" }}>bebida</span>{" "}
+            <span style={{ fontSize: "2.8vw" }}>
+              se encontram para{" "}
+              <span style={{ color: "#517605" }}>explorar</span>
+            </span>
+          </h2>
         </div>
-      </header>
-    )
+        <div className="button">
+          <Link to="/catalog">VER CATÁLOGO</Link>
+        </div>
+      </div>
+    </div>
+  );
 }
