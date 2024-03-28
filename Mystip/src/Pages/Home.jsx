@@ -8,17 +8,20 @@ export function Home() {
     <div className="home">
       <Header />
       <div className="background">
+        <div className="titleHome">
+          <h1>MYS<br /><span style={{fontSize: "9rem", color: "#C7620C"}}>TIP</span></h1>
+        </div>
         <img src={backgroundPhoto} alt="" />
       </div>
 
       <div className="text-and-button">
         <div className="text">
           <h2>
-            Onde os <span style={{ color: "#920104" }}>amantes</span> da{" "}
-            <span style={{ color: "#A7C709" }}>bebida</span>{" "}
-            <span style={{ fontSize: "2.8vw" }}>
+            Onde os <span style={{ color: "#F88406" }}>amantes</span> da{" "}
+            <span style={{ color: "#C7620C" }}>bebida</span>{" "}
+            <span style={{ fontSize: "2.4rem" }}>
               se encontram para{" "}
-              <span style={{ color: "#517605" }}>explorar</span>
+              <span style={{ color: "#F88406" }}>explorar</span>
             </span>
           </h2>
         </div>
