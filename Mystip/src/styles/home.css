@@ -1,4 +1,5 @@
-.background img{
+/* Início */
+.background img {
   max-width: 100%;
 }
 
@@ -11,40 +12,78 @@
 }
 
 .titleHome h1 {
-  color: #fff; 
+  color: #fff;
   font-size: 7rem;
-  text-align: center; 
+  text-align: center;
 }
+/* /Início */
 
-.text-and-button{
+/* Slogan */
+.text-introduction {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10%;
 }
 
-.text h2{
-  width: 60vw;
-  font-size: 2.1rem;
+.text h2 {
+  width: 50vw;
+  font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
   font-weight: normal;
 }
+/* /Slogan */
 
-.button{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  margin-top: 2%;
-  background: #C7620C;
-  width: 40vw;
-  height: 11vh;
-  border-radius: 15px;
+/* Carrossel de drinks */
+#drinks {
+  margin-top: 5%;
 }
 
-.button a{
+.inner{
+  display: flex;
+}
+
+.item{
+  padding: 3%;
+}
+
+.item img{
+  pointer-events: none;
+}
+
+.caroussel-drinks{
+  cursor: grab;
+  overflow: hidden;
+}
+/* /Carrossel */
+
+.phrase-and-button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.phrase h1{
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.button-phrase{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F88406;
+  margin-top: 2%;
+  width: 35vw;
+  height: 9vh;
+  border-radius: 20px;
+}
+
+.button-phrase a{
   text-decoration: none;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
 }

@@ -3,3 +3,15 @@
   padding: 0;
   font-family: "Montserrat", sans-serif;
 }
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-track{
+  background: #FDD7A9;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #F88C08;
+}
