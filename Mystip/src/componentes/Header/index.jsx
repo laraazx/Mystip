@@ -1,15 +1,23 @@
 import { Link } from "react-router-dom";
 import "../Header/style.css";
 
-export function Header() {
+export function Header(props) {
+  const routes = [
+    { name: "INÍCIO", path: "/" },
+    { name: "CATÁLOGO", path: "/catalog" },
+    { name: "SOBRE", path: "/about" },
+    { name: "COMENTÁRIOS", path: "/coments" },
+  ];
+
   return (
     <header>
       <div className="menu">
         <ul>
-          <li><Link to='/'>INÍCIO</Link></li>
-          <li><Link to='/catalog'>CATÁLOGO</Link></li>
-          <li><Link to="/about">SOBRE</Link></li>
-          <li><Link to="/coments">COMENTÁRIOS</Link></li>
+          {routes.map((route) => (
+            <li key={route.path} className={props.path === route.path ? 'isSelected' : undefined}>
+              <Link to={route.path}>{route.name}</Link>
+            </li>
+          ))}
         </ul>
       </div>
     </header>

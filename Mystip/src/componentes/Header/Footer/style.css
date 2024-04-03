@@ -1,0 +1,86 @@
+.footer-pages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.logo-footer, .menu-footer, .socials{
+  margin-bottom: 5%;
+}
+
+.logo-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-logoFooter img {
+  max-width: 100%;
+  width: 7vw;
+  height: auto;
+}
+
+.title-footer h1 {
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.menu-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-footer ul {
+  display: flex;
+  gap: 15%;
+  margin-right: 42%;
+}
+
+.menu-footer li, .menu-footer a {
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.3rem;
+  white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+  font-weight: 500;
+  color: #507A01;
+  cursor: pointer;
+}
+
+.socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80%;
+}
+
+.socials img{
+  width: 3vw;
+}
+
+.retangle-end{
+  width: 100%;
+  height: 10vh;
+  background: #507A01;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.elements-retangle{
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  white-space: nowrap;
+}
+
+.elements-retangle h1{
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
+}

@@ -1,0 +1,19 @@
+.slogan-catalog-start{
+  margin: 2% 0 5% 0;
+  display: flex;
+  justify-content: center;
+}
+
+.slogan-catalog-start img{
+  border: 1px solid #507A01;
+  padding: 20px;
+}
+
+.categories{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 5%;
+}

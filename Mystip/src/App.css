@@ -4,14 +4,18 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body{
+  background: #F2F2F2;
+}
+
 ::-webkit-scrollbar{
   width: 15px;
 }
 
 ::-webkit-scrollbar-track{
-  background: #FDD7A9;
+  background: #C6D2B1;
 }
 
 ::-webkit-scrollbar-thumb{
-  background: #F88C08;
+  background: #253601;
 }

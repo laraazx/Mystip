@@ -1,87 +1,112 @@
-/* Início */
-.background img {
-  max-width: 100%;
-}
-
-.titleHome {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  line-height: 1;
-}
-
-.titleHome h1 {
-  color: #fff;
-  font-size: 7rem;
-  text-align: center;
-}
-/* /Início */
-
-/* Slogan */
-.text-introduction {
+.retangle {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-top: 10%;
+  justify-content: center;
+  background: #507a01;
+  height: 6vh;
 }
 
-.text h2 {
-  width: 50vw;
-  font-size: 2rem;
-  text-align: center;
+.title-retangle h2 {
+  color: #fff;
+  font-size: 1.3vw;
   text-transform: uppercase;
   font-weight: normal;
 }
-/* /Slogan */
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5% 0 7% 0;
+}
+
+.image-logo img {
+  width: 20vw;
+}
+
+.title-logo {
+  text-align: center;
+}
+
+.title-logo h1 {
+  font-size: 4.5rem;
+  margin-left: 5%;
+}
+
+.title-logo h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-left: 6%;
+}
+
+.middle-image {
+  margin-top: 10%;
+}
+
+.middle-image img {
+  max-width: 100%;
+}
+
+.slogan-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.slogan-home h1 {
+  text-transform: uppercase;
+  font-size: 2vw;
+}
 
 /* Carrossel de drinks */
 #drinks {
   margin-top: 5%;
 }
 
-.inner{
+.inner {
   display: flex;
 }
 
-.item{
+.item {
   padding: 3%;
 }
 
-.item img{
+.item img {
   pointer-events: none;
 }
 
-.caroussel-drinks{
+.caroussel-drinks {
   cursor: grab;
   overflow: hidden;
 }
 /* /Carrossel */
 
-.phrase-and-button{
+.phrase-and-button {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-transform: uppercase;
 }
 
-.phrase h1{
+.phrase h1 {
   font-size: 2rem;
   font-weight: normal;
 }
 
-.button-phrase{
+.button-phrase {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #F88406;
+  background: #507a01;
   margin-top: 2%;
   width: 35vw;
   height: 9vh;
   border-radius: 20px;
 }
 
-.button-phrase a{
+.button-phrase a {
   text-decoration: none;
   color: #fff;
   font-size: 1.3rem;

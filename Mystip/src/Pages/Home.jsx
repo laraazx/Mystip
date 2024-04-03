@@ -1,14 +1,20 @@
+// Importando estilos e dependências necessárias para a página Home
 import "../styles/home.css";
 import { Link } from "react-router-dom";
 import { Header } from "../componentes/Header";
+import { Footer } from "../componentes/Header/Footer";
 
+// Importando Hooks do React para gerenciar estado e efeitos colaterais
 import { useState, useEffect, useRef } from "react";
 
-// Importando o motion = biblioteca usada para fazer animações, estou usando para fazer meu carrossel
-import { motion } from 'framer-motion';
+// Importando a biblioteca motion para animações
+import { motion } from "framer-motion";
 
-//Importação de fotos
-import backgroundPhoto from "../assets/img/background.svg";
+// Importando fotos
+import drinkLogo from "../assets/img/drink-logo.svg";
+import imageSlogan from "../assets/img/drink-slogan.svg";
+
+// Importando imagens necessárias para o carrossel
 import palomasDrink from "../assets/img/palomas-drink.svg";
 import mojitoDrink from "../assets/img/mojito-drink.svg";
 import gimletDrink from "../assets/img/gimlet-drink.svg";
@@ -17,7 +23,10 @@ import cosmopolitanDrink from "../assets/img/cosmopolitan-drink.svg";
 import moscowDrink from "../assets/img/moscowMule-drink.svg";
 
 const images = [palomasDrink, mojitoDrink, gimletDrink, mintDrink, cosmopolitanDrink, moscowDrink];
+
+// Componente da página Home
 export function Home() {
+
   const carousel = useRef();
   const [width, setWidth] = useState(0)
 
@@ -26,26 +35,35 @@ export function Home() {
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
   }, [])
 
-
+  // Renderização da página Home
   return (
     <section className="home">
-      <Header />
-      <div className="background">
-        <div className="titleHome">
-          <h1>MYS<br /><span style={{fontSize: "9rem", color: "#C7620C", marginLeft: '3%'}}>TIP</span></h1>
+      <div className="retangle">
+        <div className="title-retangle">
+          <h2>todos os direitos reservados</h2>
         </div>
-        <img src={backgroundPhoto} alt="" />
       </div>
 
-      <div className="text-introduction">
-        <div className="text">
-          <h2>
-            Onde os <span style={{ color: "#F88406" }}> amantes </span> da
-            <span style={{ color: "#C7620C" }}> bebida </span>
-              se encontram para 
-              <span style={{ color: "#F88406" }}> explorar </span>
-          </h2>
+      <div className="logo">
+        <div className="image-logo">
+          <img src={drinkLogo} alt="" />
         </div>
+        <div className="title-logo">
+          <h1>
+            MYS<span style={{ color: "#507A01" }}>TIP</span>
+          </h1>
+          <h2>Revelando os segredos por trás de cada gole.</h2>
+        </div>
+      </div>
+
+      <Header path="/" />
+
+      <div className="middle-image">
+        <img src={imageSlogan} alt="" />
+      </div>
+
+      <div className="slogan-home">
+        <h1>Onde os <span style={{color: '#507A01'}}>amantes</span> da <span style={{color: '#507A01'}}>bebida <br /></span> se encontram para <span style={{color: '#507A01'}}>explorar</span></h1>
       </div>
 
       <section id="drinks">
@@ -61,14 +79,14 @@ export function Home() {
 
           <div className="phrase-and-button">
             <div className="phrase">
-              <h1>Quer ver as receitas dessas <span style={{color: '#F88406', fontWeight: 'bold'}}>delícias?</span></h1>
+              <h1>Quer ver as receitas dessas <span style={{color: '#507A01', fontWeight: 'bold'}}>delícias?</span></h1>
             </div>
             <div className="button-phrase">
-              <Link to='/catalog'>VER CATÁLOGO</Link>
+              <Link to='/catalog' className="button-phrase">VER CATÁLOGO</Link>
             </div>
           </div>
       </section>
-
+      < Footer/>
     </section>
   );
 }

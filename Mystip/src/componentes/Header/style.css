@@ -1,19 +1,16 @@
-.menu{
+.menu {
   display: flex;
   justify-content: center;
-  margin: 5% 0 0 0;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
-.menu a{
+.menu a {
   text-decoration: none;
-  color: #fff;
-  transition-duration: 0.3s;
+  color: #375102;
+  transition-duration: 0.1s;
+  font-weight: bold;
 }
 
-.menu ul{
+.menu ul {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -25,6 +22,13 @@
   display: inline-block;
 }
 
-.menu a:hover{
-  color: #C7620C;
+.menu a:hover {
+  padding-bottom: 5px;
+  border-bottom: 3px solid #375102; 
+}
+
+.isSelected a{
+  padding-bottom: 5px;
+  border-bottom: 3px solid #375102; 
+  color: #375102; 
 }

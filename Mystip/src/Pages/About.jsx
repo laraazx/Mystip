@@ -1,8 +1,9 @@
+import { Header } from "../componentes/Header";
 
 export function About() {
-    return (
-        <main>
-            
-        </main>
-    )
+  return (
+    <div>
+      <Header path="/about" />
+    </div>
+  );
 }
