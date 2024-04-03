@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #507a01;
+  background: #28684A;
   height: 6vh;
 }
 
@@ -30,7 +30,7 @@
 
 .title-logo h1 {
   font-size: 4.5rem;
-  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .title-logo h2 {
@@ -99,7 +99,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #507a01;
+  background: #28684A;
   margin-top: 2%;
   width: 35vw;
   height: 9vh;
@@ -111,4 +111,4 @@
   color: #fff;
   font-size: 1.3rem;
   font-weight: bold;
-}
+} 

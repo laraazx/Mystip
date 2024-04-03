@@ -3,7 +3,7 @@ import "../Header/style.css";
 
 export function Header(props) {
   const routes = [
-    { name: "INÍCIO", path: "/" },
+    { name: "HOME", path: "/" },
     { name: "CATÁLOGO", path: "/catalog" },
     { name: "SOBRE", path: "/about" },
     { name: "COMENTÁRIOS", path: "/coments" },

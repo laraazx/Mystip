@@ -17,6 +17,10 @@
   align-items: center;
 }
 
+.image-logoFooter{
+  margin-left: 15%;
+}
+
 .image-logoFooter img {
   max-width: 100%;
   width: 7vw;
@@ -48,7 +52,7 @@
   font-size: 1.3rem;
   white-space: nowrap; /* Evita que o texto quebre em várias linhas */
   font-weight: 500;
-  color: #507A01;
+  color: #28684A;
   cursor: pointer;
 }
 
@@ -66,7 +70,7 @@
 .retangle-end{
   width: 100%;
   height: 10vh;
-  background: #507A01;
+  background: #28684A;
   display: flex;
   align-items: center;
   justify-content: center;

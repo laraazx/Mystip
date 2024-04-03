@@ -5,9 +5,9 @@
 
 .menu a {
   text-decoration: none;
-  color: #375102;
+  color: #28684A;
   transition-duration: 0.1s;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .menu ul {
@@ -24,11 +24,11 @@
 
 .menu a:hover {
   padding-bottom: 5px;
-  border-bottom: 3px solid #375102; 
+  border-bottom: 3px solid #28684A; 
 }
 
 .isSelected a{
-  padding-bottom: 5px;
-  border-bottom: 3px solid #375102; 
-  color: #375102; 
+  padding-bottom: 3px;
+  border-bottom: 3px solid #28684A; 
+  color: #28684A; 
 }

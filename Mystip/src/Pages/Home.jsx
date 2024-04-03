@@ -40,7 +40,7 @@ export function Home() {
     <section className="home">
       <div className="retangle">
         <div className="title-retangle">
-          <h2>todos os direitos reservados</h2>
+          <h2>um lugar para você explorar</h2>
         </div>
       </div>
 
@@ -50,7 +50,7 @@ export function Home() {
         </div>
         <div className="title-logo">
           <h1>
-            MYS<span style={{ color: "#507A01" }}>TIP</span>
+            MYS<span style={{ color: '#28684A' }}>TIP</span>
           </h1>
           <h2>Revelando os segredos por trás de cada gole.</h2>
         </div>
@@ -63,7 +63,7 @@ export function Home() {
       </div>
 
       <div className="slogan-home">
-        <h1>Onde os <span style={{color: '#507A01'}}>amantes</span> da <span style={{color: '#507A01'}}>bebida <br /></span> se encontram para <span style={{color: '#507A01'}}>explorar</span></h1>
+        <h1>Onde os <span style={{color: '#28684A'}}>amantes</span> da <span style={{color: '#28684A'}}>bebida <br /></span> se encontram para <span style={{color: '#28684A'}}>explorar</span></h1>
       </div>
 
       <section id="drinks">
@@ -79,7 +79,7 @@ export function Home() {
 
           <div className="phrase-and-button">
             <div className="phrase">
-              <h1>Quer ver as receitas dessas <span style={{color: '#507A01', fontWeight: 'bold'}}>delícias?</span></h1>
+              <h1>Quer ver as receitas dessas <span style={{color: '#28684A', fontWeight: 'bold'}}>delícias?</span></h1>
             </div>
             <div className="button-phrase">
               <Link to='/catalog' className="button-phrase">VER CATÁLOGO</Link>

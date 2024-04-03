@@ -1,19 +1,35 @@
-.slogan-catalog-start{
-  margin: 2% 0 5% 0;
-  display: flex;
-  justify-content: center;
+.slogan-catalog-start {
+  margin-bottom: 5%;
 }
 
-.slogan-catalog-start img{
-  border: 1px solid #507A01;
-  padding: 20px;
+.slogan-catalog-start img {
+  max-width: 100%;
 }
 
 .categories{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 10%;
+}
 
-  margin-top: 5%;
+.title-categories {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.categories-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.items {
+  flex: 0 0 calc(50% - 20px);
+  max-width: calc(45% - 20px);
+}
+
+.items img {
+  width: 100%;
+  display: block;
 }

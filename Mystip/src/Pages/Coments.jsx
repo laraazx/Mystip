@@ -90,7 +90,7 @@ export function Coments() {
       .then((res) => res.json())
       .then((data) => data);
 
-    setComents([...coments, response]);
+    setComents(response);
   };
 
   useEffect(() => {
@@ -101,12 +101,6 @@ export function Coments() {
     <div>
       <Header path="/coments" />
 
-      {!!coments.length &&
-        coments.map((coment) => (
-            <p key={coment.nome}>{coment.nome}</p>
-        ))}
-
-        
       <form onSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="nome">Nome:</label>
@@ -169,6 +163,16 @@ export function Coments() {
           <button type="submit">Enviar</button>
         </div>
       </form>
+
+      {!!coments.length &&
+        coments.map((coment) => (
+          <div key={coment.id}>
+            <p>Nome: {coment.nome}</p>
+            <p>Sobrenome: {coment.sobrenome}</p>
+            <p>Idade: {coment.idade}</p>
+            <p>Comentário: {coment.comentario}</p>
+          </div>
+        ))}
     </div>
   );
 }
