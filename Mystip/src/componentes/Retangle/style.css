@@ -1,0 +1,14 @@
+.retangle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #28684A;
+  height: 6vh;
+}
+
+.title-retangle h2 {
+  color: #fff;
+  font-size: 1.3vw;
+  text-transform: uppercase;
+  font-weight: normal;
+}

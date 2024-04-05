@@ -12,6 +12,11 @@
   margin: 2% 0 0 0;
 }
 
+.image-slogan-catalog img{
+  width: 95%;
+  height: auto;
+}
+
 .categories{
   display: flex;
   flex-direction: column;

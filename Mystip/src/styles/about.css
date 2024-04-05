@@ -19,14 +19,14 @@
 }
 
 .title-about {
-  width: 80%;
+  width: 90%;
   text-align: center;
 }
 
 .title-about h1 {
   font-size: 2.8rem;
   color: #28684a;
-  margin-bottom: 40%;
+  margin-bottom: 30%;
 }
 
 .text-info {
@@ -48,8 +48,8 @@
 }
 
 .images-about {
-  margin-right: 4%;
-  margin-top: 6%; 
+  margin-right: 3%;
+  margin-top: 6%;
 }
 
 .container {
@@ -66,7 +66,7 @@
   text-align: center;
 }
 
-.number h1{
+.number h1 {
   font-size: 4rem;
   color: white;
 }

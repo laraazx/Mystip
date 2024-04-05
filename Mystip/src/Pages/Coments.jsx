@@ -1,5 +1,12 @@
+import "../styles/coments.css";
+
 import { useEffect, useState } from "react";
 import { Header } from "../componentes/Header";
+import { Retangle } from "../componentes/Retangle";
+import { Footer } from "../componentes/Header/Footer";
+
+// Fotos
+import imageBox from "../assets/img/box-coments.svg";
 
 export function Coments() {
   const formInitil = {
@@ -99,80 +106,109 @@ export function Coments() {
 
   return (
     <div>
+      <Retangle />
+      <div className="box-coments">
+        <div className="image-box">
+          <img src={imageBox} alt="" />
+        </div>
+        <div className="form-coment">
+          <div className="title-coment">
+            <h1>Deixe seu feedback!</h1>
+          </div>
+          <form onSubmit={handleSubmit}>
+            <div className="form-control">
+              <label htmlFor="nome"></label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                value={formState.nome}
+                onChange={handleInput}
+                placeholder="Nome"
+                required
+                maxLength={15}
+                minLength={4}
+                autoComplete="off"
+              />
+            </div>
+            <div className="form-control">
+              <label htmlFor="sobrenome"></label>
+              <input
+                type="text"
+                id="sobrenome"
+                name="sobrenome"
+                value={formState.sobrenome}
+                onChange={handleInput}
+                placeholder="Sobrenome"
+                required
+                minLength={4}
+                maxLength={40}
+                autoComplete="off"
+              />
+            </div>
+            <div className="form-control">
+              <label htmlFor="idade"></label>
+              <input
+                type="number"
+                id="idade"
+                name="idade"
+                value={formState.idade}
+                onChange={handleInput}
+                placeholder="Idade"
+                required
+                min={18}
+                max={120}
+              />
+            </div>
+            <div
+              className="form-control"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                marginTop: "5%",
+              }}
+            >
+              <label
+                htmlFor="comentario"
+                style={{
+                  color: "#fff",
+                  marginBottom: "5px",
+                  fontSize: "1.3rem",
+                }}
+              >
+                Deixe aqui seu comentário:
+              </label>
+              <textarea
+                id="comentario"
+                name="comentario"
+                value={formState.comentario}
+                onChange={handleInput}
+                required
+                maxLength={200}
+                autoComplete="off"
+              />
+            </div>
+
+            <div>
+              <button type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
       <Header path="/coments" />
 
-      <form onSubmit={handleSubmit}>
-        <div className="form-control">
-          <label htmlFor="nome">Nome:</label>
-          <input
-            type="text"
-            id="nome"
-            name="nome"
-            value={formState.nome}
-            onChange={handleInput}
-            placeholder="Digite seu nome"
-            required
-            maxLength={15}
-            minLength={4}
-            autoComplete="off"
-          />
-        </div>
-        <div className="form-control">
-          <label htmlFor="sobrenome">Sobrenome:</label>
-          <input
-            type="text"
-            id="sobrenome"
-            name="sobrenome"
-            value={formState.sobrenome}
-            onChange={handleInput}
-            placeholder="Digite seu sobrenome"
-            required
-            minLength={4}
-            maxLength={40}
-            autoComplete="off"
-          />
-        </div>
-        <div className="form-control">
-          <label htmlFor="idade">Idade:</label>
-          <input
-            type="number"
-            id="idade"
-            name="idade"
-            value={formState.idade}
-            onChange={handleInput}
-            placeholder="Digite sua idade"
-            required
-            min={18}
-            max={120}
-          />
-        </div>
-        <div className="form-control">
-          <label htmlFor="comentario">Comentário:</label>
-          <input
-            type="text"
-            id="comentario"
-            name="comentario"
-            value={formState.comentario}
-            onChange={handleInput}
-            placeholder="Digite seu comentário"
-            required
-            maxLength={200}
-          />
-        </div>
-        <div>
-          <button type="submit">Enviar</button>
-        </div>
-      </form>
-
-      {!!coments.length &&
-        coments.map((coment) => (
-          <div key={coment.id}>
-            <p>Nome: {coment.nome}</p>
-            <p>Sobrenome: {coment.sobrenome}</p>
-            <p>Idade: {coment.idade}</p>
-            <p>Comentário: {coment.comentario}</p>
-          </div>
-        ))}
+      <div className="comentario-container">
+        {coments.length > 0 &&
+          coments.map((coment) => (
+            <div key={coment.id} className="comentario">
+              <p>Nome: {coment.nome}</p>
+              <p>Sobrenome: {coment.sobrenome}</p>
+              <p>Idade: {coment.idade}</p>
+              <p>Comentário: {coment.comentario}</p>
+            </div>
+          ))}
+      </div>
+      <Footer/>
     </div>
   );
 }

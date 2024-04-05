@@ -3,6 +3,7 @@ import "../styles/home.css";
 import { Link } from "react-router-dom";
 import { Header } from "../componentes/Header";
 import { Footer } from "../componentes/Header/Footer";
+import { Retangle } from "../componentes/Retangle";
 
 // Importando Hooks do React para gerenciar estado e efeitos colaterais
 import { useState, useEffect, useRef } from "react";
@@ -38,11 +39,7 @@ export function Home() {
   // Renderização da página Home
   return (
     <section className="home">
-      <div className="retangle">
-        <div className="title-retangle">
-          <h2>um lugar para você explorar</h2>
-        </div>
-      </div>
+      <Retangle/>
 
       <div className="logo">
         <div className="image-logo">

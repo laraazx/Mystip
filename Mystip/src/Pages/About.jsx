@@ -1,5 +1,6 @@
 import { Header } from "../componentes/Header";
 import { Footer } from "../componentes/Header/Footer";
+import { Retangle } from "../componentes/Retangle";
 import "../styles/about.css";
 
 // Fotos
@@ -11,11 +12,7 @@ import image3 from "../assets/img/img3-about.svg";
 export function About() {
   return (
     <section className="about-page">
-      <div className="retangle">
-        <div className="title-retangle">
-          <h2>um lugar para você explorar</h2>
-        </div>
-      </div>
+      <Retangle/>
 
       <div className="imageStart">
         <img src={imageAbout} alt="" />
