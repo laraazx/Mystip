@@ -6,6 +6,12 @@
   max-width: 100%;
 }
 
+.image-slogan-catalog{
+  display: flex;
+  justify-content: center;
+  margin: 2% 0 0 0;
+}
+
 .categories{
   display: flex;
   flex-direction: column;
