@@ -1,14 +1,13 @@
 import "../styles/coments.css";
-
 import { useEffect, useState } from "react";
 import { Header } from "../componentes/Header";
 import { Retangle } from "../componentes/Retangle";
-import { Footer } from "../componentes/Header/Footer";
-
-// Fotos
+import { Footer } from "../componentes/Footer";
 import imageBox from "../assets/img/box-coments.svg";
 
+// Componente para a página de comentários
 export function Coments() {
+  // Estado inicial do formulário
   const formInitil = {
     nome: "",
     sobrenome: "",
@@ -16,23 +15,24 @@ export function Coments() {
     comentario: "",
   };
 
+  // Estados para o formulário e os comentários
   const [formState, setFormState] = useState(formInitil);
   const [coments, setComents] = useState([]);
 
+  // Função para lidar com a entrada de dados no formulário
   const handleInput = (event) => {
     const target = event.currentTarget;
-
     const { value, name } = target;
-
     setFormState({ ...formState, [name]: value });
   };
 
+  // Função para submeter o formulário
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const { nome, sobrenome, idade, comentario } = formState;
 
-    //
+    // Validação dos campos do formulário
     if (!nome.trim() || nome.trim().length > 15 || nome.trim().length < 4) {
       alert(
         "O campo de nome não pode ser vazio, maior que 14 e menor que 4 caractéres!"
@@ -55,6 +55,7 @@ export function Coments() {
       );
     }
 
+    // Construção do objeto de comentário
     const formComents = {
       nome: nome.trim(),
       sobrenome: sobrenome.trim(),
@@ -62,6 +63,7 @@ export function Coments() {
       comentario: comentario.trim(),
     };
 
+    // Requisição para enviar o comentário
     const requestOptions = {
       method: "POST",
       headers: {
@@ -70,6 +72,7 @@ export function Coments() {
       body: JSON.stringify(formComents),
     };
 
+    // Enviar o comentário para o servidor
     const response = await fetch(
       "http://localhost:3000/coments",
       requestOptions
@@ -77,11 +80,14 @@ export function Coments() {
       .then((res) => res.json())
       .then((data) => data);
 
+    // Limpar o formulário após o envio
     setFormState({ ...formInitil });
 
+    // Atualizar a lista de comentários com o novo comentário
     setComents([...coments, response]);
   };
 
+  // Função para obter os comentários do servidor
   const getComents = async () => {
     const requestOptions = {
       method: "GET",
@@ -90,6 +96,7 @@ export function Coments() {
       },
     };
 
+    // Requisição para obter os comentários
     const response = await fetch(
       "http://localhost:3000/coments",
       requestOptions
@@ -97,15 +104,19 @@ export function Coments() {
       .then((res) => res.json())
       .then((data) => data);
 
+    // Atualizar o estado dos comentários com os comentários obtidos
     setComents(response);
   };
 
+  // Efeito para carregar os comentários quando o componente for montado
   useEffect(() => {
     getComents();
   }, []);
 
+  // Renderização da página de comentários
   return (
     <div>
+      {/* Componente Retangle para fins decorativos */}
       <Retangle />
       <div className="box-coments">
         <div className="image-box">
@@ -115,6 +126,7 @@ export function Coments() {
           <div className="title-coment">
             <h1>Deixe seu feedback!</h1>
           </div>
+          {/* Formulário para enviar um novo comentário */}
           <form onSubmit={handleSubmit}>
             <div className="form-control">
               <label htmlFor="nome"></label>
@@ -195,8 +207,9 @@ export function Coments() {
           </form>
         </div>
       </div>
+      {/* Cabeçalho da página de comentários */}
       <Header path="/coments" />
-
+      {/* Container para os comentários */}
       <div className="comentario-container">
         {coments.length > 0 &&
           coments.map((coment) => (
@@ -208,7 +221,7 @@ export function Coments() {
             </div>
           ))}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

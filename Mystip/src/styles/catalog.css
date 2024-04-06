@@ -44,3 +44,48 @@
   width: 100%;
   display: block;
 }
+
+/* Categoria de bebidas */
+.background{
+  margin-bottom: 5%;
+}
+
+.background img{
+  max-width: 100%;
+}
+
+.revenues{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.revenues-image{
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+}
+
+.revenues-image img{
+  width: 70%;
+}
+
+.coment-site{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title h1{
+  color: #28684A;
+  font-size: 3rem;
+}
+
+.sub-coment{
+  font-size: 1.5rem;
+}
+
+.sub-coment a{
+  text-decoration: none;
+  color: #000;
+}
