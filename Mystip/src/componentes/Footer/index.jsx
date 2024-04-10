@@ -1,6 +1,8 @@
 import "./style.css"; // Importa os estilos do componente Footer
 import { Link } from "react-router-dom"; // Importa o componente Link do React Router
-import { useRef } from "react"; // Importa o hook useRef do React
+// React Router Dom é uma biblioteca de roteamento de aplicativos dentro do React
+// O roteamento de aplicativos, em um contexto de desenvolvimento web, refere-se à prática de definir e gerenciar diferentes "rotas" dentro de um aplicativo web
+// Uma rota nada mais é do que um caminho específico para algum lugar
 
 // Importa as imagens necessárias
 import logoFooter from "../../assets/img/drink-logo.svg";
@@ -9,13 +11,17 @@ import iconWpp from "../../assets/img/whatsapp.svg";
 import iconBehance from "../../assets/img/behance.svg";
 import copyrightFooter from "../../assets/img/copyright.svg";
 
-// Função para rolar suavemente para o topo da página
+// Esta função é responsável por rolar a página suavemente para o topo
 function scrollToTop() {
+  // Utiliza a API do navegador para rolar a página para uma posição específica
   window.scrollTo({
+    // Define a posição para onde a página deve rolar, neste caso, o topo (0 pixels)
     top: 0,
+    // Define o comportamento da rolagem, neste caso, suavemente
     behavior: "smooth", // Rola suavemente para o topo
   });
 }
+// Window é um objeto global em JavaScript que representa a janela do navegador
 
 // Componente Footer
 export function Footer() {
@@ -37,17 +43,15 @@ export function Footer() {
       {/* Menu do rodapé */}
       <div className="menu-footer">
         <ul>
-          <li onClick={scrollToTop}>INÍCIO</li>{" "}
           {/* Item do menu para rolar para o topo */}
-          <li>TERMOS DE USO</li> {/* Item do menu para os termos de uso */}
+          <li onClick={scrollToTop}>INÍCIO</li>{" "}
+          <li>TERMOS DE USO</li>
           <li>
             <Link to="/about">SOBRE NÓS</Link>
           </li>{" "}
-          {/* Item do menu com link para a página "Sobre Nós" */}
           <li>
             <Link to="/coments">COMENTÁRIOS</Link>
           </li>{" "}
-          {/* Item do menu com link para a página "Comentários" */}
         </ul>
       </div>
 

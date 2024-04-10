@@ -1,15 +1,21 @@
+/* Estilos para o rodapé da página */
 .footer-pages {
+  margin-top: 10%; /* Margem superior de 10% */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin-top: 10%;
+  align-items: center; 
 }
 
-.logo-footer, .menu-footer, .socials{
-  margin-bottom: 5%;
+/* Estilos para a seção do logo, menu e ícones sociais */
+.logo-footer,
+.menu-footer,
+.socials {
+  margin-bottom: 5%; /* Margem inferior de 5% para separar os elementos */
 }
 
+/* Estilos para o logo */
 .logo-footer {
   display: flex;
   flex-direction: column;
@@ -17,74 +23,92 @@
   align-items: center;
 }
 
-.image-logoFooter{
-  margin-left: 15%;
+/* Estilos para a imagem do logo */
+.image-logoFooter {
+  margin-left: 15%; /* Margem à esquerda de 15% */
 }
 
+/* Estilos para a imagem do logo dentro do footer */
 .image-logoFooter img {
   max-width: 100%;
-  width: 7vw;
+  width: 7vw; /* Largura de 7% da largura da tela */
   height: auto;
 }
 
+/* Estilos para o título do logo */
 .title-footer h1 {
-  text-transform: uppercase;
+  margin-left: 10px; /* Margem à esquerda de 10px */
+
   font-size: 2.3rem;
-  margin-left: 10px;
   font-weight: 500;
+  text-transform: uppercase; /* Transforma o texto em maiúsculo */
 }
 
+/* Estilos para o menu do footer */
 .menu-footer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Estilos para a lista de itens do menu */
 .menu-footer ul {
+  margin-right: 42%; /* Margem à direita de 42% */
+
   display: flex;
-  gap: 15%;
-  margin-right: 42%;
+  gap: 15%; /* Espaço entre os itens de menu de 15% */
 }
 
-.menu-footer li, .menu-footer a {
-  list-style: none;
-  text-decoration: none;
+/* Estilos para os itens de menu e links */
+.menu-footer li,
+.menu-footer a {
+  list-style: none; /* Remove os estilos de lista */
+  text-decoration: none; /* Remove a decoração do link */
+
   font-size: 1.3rem;
-  white-space: nowrap; /* Evita que o texto quebre em várias linhas */
   font-weight: 500;
-  color: #28684A;
-  cursor: pointer;
+  color: #28684a; /* Cor do texto */
+
+  white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+  cursor: pointer; /* Altera o cursor para indicar um link clicável */
 }
 
-.socials{
+/* Estilos para os ícones sociais */
+.socials {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80%;
+  gap: 80%; /* Espaço entre os ícones de 80% */
 }
 
-.socials img{
-  width: 3vw;
+/* Estilos para as imagens dos ícones sociais */
+.socials img {
+  width: 3vw; /* Largura de 3% da largura da tela */
 }
 
-.retangle-end{
+/* Estilos para a parte inferior do rodapé */
+.retangle-end {
   width: 100%;
-  height: 10vh;
-  background: #28684A;
+  height: 10vh; /* Altura de 10% da altura da tela */
+  
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background: #28684a; /* Cor de fundo */
 }
 
-.elements-retangle{
+/* Estilos para os elementos dentro do retângulo inferior */
+.elements-retangle {
   display: flex;
   align-items: center;
-  gap: 5%;
-  white-space: nowrap;
+  gap: 5%; /* Espaço entre os elementos de 5% */
+  white-space: nowrap; /* Evita que o texto quebre em várias linhas */
 }
 
-.elements-retangle h1{
-  color: #fff;
+/* Estilos para o texto dentro do retângulo inferior */
+.elements-retangle h1 {
+  color: #fff; /* Cor do texto */
   font-size: 1.3rem;
   font-weight: 400;
 }

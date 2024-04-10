@@ -1,34 +1,43 @@
 .menu {
+  /* Define o menu como um flex container e centraliza os itens horizontalmente */
   display: flex;
   justify-content: center;
 }
 
 .menu a {
-  text-decoration: none;
-  color: #28684A;
-  transition-duration: 0.1s;
-  font-weight: 500;
+  /* Estilo para os links do menu */
+  color: #28684a; /* Cor do texto */
+  font-weight: 500; /* Peso da fonte */
+
+  transition-duration: 0.1s; /* Duração da transição */
+  text-decoration: none; /* Remove decoração de sublinhado */
 }
 
 .menu ul {
-  list-style: none;
+  /* Define a lista de itens do menu como um flex container, centraliza os itens horizontalmente e adiciona um espaçamento entre eles */
   display: flex;
   justify-content: center;
-  gap: 20%;
-  font-size: 1.8vw;
+  gap: 20%; /* Espaçamento entre os itens do menu */
+
+  font-size: 1.8vw; /* Tamanho da fonte em relação à largura da viewport */
+
+  list-style: none; /* Remove a estilização padrão da lista */
 }
 
 .menu li {
+  /* Define os itens da lista como inline-block para que possam ser posicionados horizontalmente */
   display: inline-block;
 }
 
 .menu a:hover {
-  padding-bottom: 5px;
-  border-bottom: 3px solid #28684A; 
+  /* Estilo aplicado quando o mouse passa por cima do link */
+  padding-bottom: 5px; /* Adiciona um espaçamento na parte inferior */
+  border-bottom: 3px solid #28684a; /* Adiciona uma linha na parte inferior */
 }
 
-.isSelected a{
-  padding-bottom: 3px;
-  border-bottom: 3px solid #28684A; 
-  color: #28684A; 
+.isSelected a {
+  /* Estilo aplicado quando o link está selecionado */
+  padding-bottom: 3px; /* Adiciona um espaçamento na parte inferior */
+  border-bottom: 3px solid #28684a; /* Adiciona uma linha na parte inferior */
+  color: #28684a; /* Altera a cor do texto */
 }
