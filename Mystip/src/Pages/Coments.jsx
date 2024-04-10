@@ -33,9 +33,9 @@ export function Coments() {
     const { nome, sobrenome, idade, comentario } = formState;
 
     // Validação dos campos do formulário
-    if (!nome.trim() || nome.trim().length > 15 || nome.trim().length < 4) {
+    if (!nome.trim() || nome.trim().length > 15 || nome.trim().length < 3) {
       alert(
-        "O campo de nome não pode ser vazio, maior que 14 e menor que 4 caractéres!"
+        "O campo de nome não pode ser vazio, maior que 14 e menor que 3 caractéres!"
       );
     } else if (
       !sobrenome.trim() ||
@@ -139,7 +139,7 @@ export function Coments() {
                 placeholder="Nome"
                 required
                 maxLength={15}
-                minLength={4}
+                minLength={3}
                 autoComplete="off"
               />
             </div>
