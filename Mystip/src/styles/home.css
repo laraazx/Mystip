@@ -1,99 +1,103 @@
 .logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5% 0 7% 0;
+  display: flex; /* Define um layout flexível para os elementos */
+  flex-direction: column; /* Define a direção da disposição como coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  margin: 5% 0 7% 0; /* Define margem superior e inferior */
 }
 
 .image-logo img {
-  width: 20vw;
+  width: 20vw; /* Define a largura da imagem como 20% da largura da viewport */
 }
 
 .title-logo {
-  text-align: center;
+  text-align: center; /* Centraliza o texto horizontalmente */
 }
 
 .title-logo h1 {
-  font-size: 4.5rem;
-  margin-right: 5%;
+  font-size: 4.5rem; /* Define o tamanho da fonte */
 }
 
 .title-logo h2 {
-  font-size: 1.5rem;
-  font-weight: normal;
-  margin-left: 6%;
+  font-size: 1.5rem; /* Define o tamanho da fonte */
+  font-weight: normal; /* Define o peso da fonte como normal */
 }
 
 .middle-image {
-  margin-top: 10%;
+  margin-top: 10%; /* Define margem no topo */
 }
 
 .middle-image img {
-  max-width: 100%;
+  max-width: 100%; /* Define a largura máxima da imagem como 100% */
 }
 
 .slogan-home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 10%;
+  display: flex; /* Define um layout flexível para os elementos */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  margin-top: 10%; /* Define margem no topo */
 }
 
 .slogan-home h1 {
-  text-transform: uppercase;
-  font-size: 2vw;
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  font-size: 2vw; /* Define o tamanho da fonte como 2% da largura da viewport */
 }
 
-/* Carrossel de drinks */
+/* Estilos para o contêiner dos drinks */
 #drinks {
-  margin-top: 5%;
+  margin-top: 5%; /* Define margem no topo */
 }
 
+/* Estilos para o contêiner interno do carrossel */
 .inner {
-  display: flex;
+  display: flex; /* Define um layout flexível para os elementos */
 }
 
+/* Estilos para os itens do carrossel */
 .item {
-  padding: 3%;
+  padding: 3%; /* Define o preenchimento interno */
 }
 
 .item img {
-  pointer-events: none;
+  pointer-events: none; /* Desativa a interação do cursor com a imagem */
 }
 
+/* Estilos para o contêiner do carrossel de drinks */
 .caroussel-drinks {
-  cursor: grab;
-  overflow: hidden;
+  cursor: grab; /* Define o cursor como "agarrar" */
+  overflow: hidden; /* Esconde o overflow horizontal */
 }
-/* /Carrossel */
 
+/* Estilos para a frase e o botão */
 .phrase-and-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-transform: uppercase;
+  display: flex; /* Define um layout flexível para os elementos */
+  flex-direction: column; /* Define a direção da disposição como coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
 }
 
+/* Estilos para a frase */
 .phrase h1 {
-  font-size: 2rem;
-  font-weight: normal;
+  font-size: 2rem; /* Define o tamanho da fonte */
+  font-weight: normal; /* Define o peso da fonte como normal */
 }
 
+/* Estilos para o botão da frase */
 .button-phrase {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #28684A;
-  margin-top: 2%;
-  width: 35vw;
-  height: 9vh;
-  border-radius: 20px;
+  display: flex; /* Define um layout flexível para os elementos */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  background: #28684A; /* Define o fundo como a cor hexadecimal #28684A */
+  margin-top: 2%; /* Define margem no topo */
+  width: 35vw; /* Define a largura como 35% da largura da viewport */
+  height: 9vh; /* Define a altura como 9% da altura da viewport */
+  border-radius: 20px; /* Define o raio de borda */
 }
 
+/* Estilos para o link dentro do botão */
 .button-phrase a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.3rem;
-  font-weight: bold;
-} 
+  text-decoration: none; /* Remove a decoração do link */
+  color: #fff; /* Define a cor do texto como branco */
+  font-size: 1.3rem; /* Define o tamanho da fonte */
+  font-weight: bold; /* Define o peso da fonte como negrito */
+}

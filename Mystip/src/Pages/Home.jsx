@@ -35,12 +35,16 @@ const images = [
 
 // Componente da página Home
 export function Home() {
-  // Referência para o carrossel e estado para armazenar a largura total do carrossel
+  // Referência para o componente de carrossel
   const carousel = useRef();
+
+  // Estado para armazenar a largura do carrossel
   const [width, setWidth] = useState(0);
 
-  // Efeito para calcular a largura total do carrossel
+  // Efeito utilizado para calcular dinamicamente a largura total do carrossel
   useEffect(() => {
+    // Calcula a diferença entre a largura total do conteúdo do carrossel e a largura visível do carrossel
+    // Isso permite determinar se há conteúdo além da área visível do carrossel
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
   }, []);
 
@@ -84,20 +88,28 @@ export function Home() {
 
       {/* Seção dos drinks com carrossel */}
       <section id="drinks">
+        {/* Carrossel de bebidas */}
         <motion.div
-          ref={carousel}
+          ref={carousel} // Referência utilizada para obter o elemento DOM do carrossel
+          // O termo "DOM" significa "Document Object Model" (Modelo de Objeto de Documento) 
+          // e representa uma interface de programação para documentos HTML, XML e XHTML.
+          // Quando se refere ao "elemento DOM" em um contexto de desenvolvimento web, 
+          // geralmente está se falando sobre um objeto JavaScript que representa um elemento 
+          // específico na página. Esse objeto oferece métodos e propriedades que permitem manipular 
+          // e interagir com o elemento HTML associado
           className="caroussel-drinks"
-          whileTap={{ cursor: "grabbing" }}
+          whileTap={{ cursor: "grabbing" }} // Define o cursor como "grabbing" durante o clique e arrasto
         >
+          {/* Contêiner interno para o carrossel */}
           <motion.div
             className="inner"
-            drag="x"
-            dragConstraints={{ right: 0, left: -width }}
+            drag="x" // Permite arrastar horizontalmente o conteúdo do carrossel
+            dragConstraints={{ right: 0, left: -width }} // Restringe o arrasto para dentro dos limites do carrossel
           >
-            {/* Mapeando as imagens do carrossel */}
+            {/* Mapeando e renderizando as imagens do carrossel */}
             {images.map((image) => (
               <motion.div className="item" key={image}>
-                <img src={image} alt="" />
+                <img src={image} alt="" /> {/* Imagem do carrossel */}
               </motion.div>
             ))}
           </motion.div>
